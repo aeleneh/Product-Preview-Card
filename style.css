@@ -1,0 +1,140 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #f3ebe3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.preview-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #fff;
+    width: 40rem;
+    max-width: 900px;
+    border-radius: 0.625rem;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+} 
+
+.image-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.image-section img { 
+    max-width: 100%;
+    display: block;
+    height: auto;
+}
+
+.content-section {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 2.5rem;
+    overflow: hidden;
+}
+
+.content-section h1 { 
+    font-family: "Fraunces", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-size: 2rem;
+    font-style: normal;
+    color: #3c8067;
+    font-variation-settings: normal;
+}
+
+.content-section h2 {
+    font-family: "Fraunces", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-size: 1.8rem;
+    font-style: normal;
+    font-variation-settings: normal; 
+} 
+
+.content-section h3 {
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-size: medium;
+  font-style: normal;
+  color: #6b7189;
+  letter-spacing: 5px;
+  margin-bottom: 1rem;
+}
+
+.content-section p {
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-size: 1rem;
+  font-style: normal;
+  color: #6b7189;
+  margin-top: 1rem;
+  line-height: 1.5;
+}
+
+.prices {
+    display: flex;
+    flex-direction: row;
+    margin-top: 1rem;
+}
+
+.content-section del {
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-size: small;
+  font-style: normal;
+  color: #6b7189;
+  margin-left: 1rem;
+}
+
+.add-to-cart {
+    background-color: #2d604d;
+    color: #fff;
+    border: 1px solid #2d604d;
+    margin-top: 1rem;
+    border-radius: 5px;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.add-to-cart span {
+    margin-left: 1rem;
+}
+
+/* Desktop first media query */
+@media (max-width: 768px) {
+    .preview-card {
+        grid-template-columns: 1fr;
+        width: 90%;
+        margin: 0rem auto;
+    }
+    .image-section  img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 9; 
+        object-fit: cover;
+    }
+    .content-section {
+        padding: 1.5rem;
+    }
+    .content-section h2 {
+        font-size: 1.5rem;
+    }
+    .add-to-cart {
+        padding: 0.75rem;
+        font-size: 0.875rem;
+    }
+}
